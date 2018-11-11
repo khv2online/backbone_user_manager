@@ -1,0 +1,37 @@
+extends /layouts/main_layout
+block vars
+	- var title = "backbone userlist";
+block content
+	.PageWrap
+		.container
+			.row
+				.col-12
+					h1.mb-4 User manager
+			.row
+				.col-12
+					.UserList
+						table.UserList_table.table.table-hover.table-striped.table-sm
+							thead
+								tr
+									th name
+									th phone
+									th &nbsp;
+							tbody.UserList_tableBody
+
+						.card
+							.card-body
+								form.UserList_addForm(autocomplete="off")
+									.row
+										.col
+											.form-group
+												input.UserList_addInput.UserList_addInput-name.form-control(type='text', name='name', placeholder='name')
+										.col
+											.form-group
+												input.UserList_addInput.UserList_addInput-tel.form-control(type='tel', name='tel', placeholder='phone')
+										.col
+											button.btn.btn-primary(type='submit') add
+	
+	script(type="text/template" id="user-template") 
+		include /includes/clientside_templates/user-row-template.tpl
+block page_bottom
+	script(src="./js/index.js")

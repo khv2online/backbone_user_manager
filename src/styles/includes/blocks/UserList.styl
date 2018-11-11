@@ -1,0 +1,27 @@
+.UserList
+	&_tdInner
+		position relative
+		width 100%
+		padding 10px
+	&_td
+		vertical-align middle !important
+	&_inRowInput
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+
+	&_tr &_inRowInput,
+	&_tr &_btn-save,
+	&_tr &_btn-cancel
+		display none
+		
+	&_tr-edit &_inRowInput,
+	&_tr-edit &_btn-save,
+	&_tr-edit &_btn-cancel
+		display inline-block
+		
+	&_tr-edit &_btn-remove,
+	&_tr-edit &_btn-edit
+		display none
